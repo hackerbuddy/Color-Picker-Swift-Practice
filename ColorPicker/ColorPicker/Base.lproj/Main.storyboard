@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ColorViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEV-Ek-3W7">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ijJ-mV-aAL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oJh-Fr-56n"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy6-g8-ANv">
+                                <rect key="frame" x="166" y="390" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hEV-Ek-3W7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6Cq-sG-JAx"/>
+                            <constraint firstItem="dy6-g8-ANv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HZ2-ew-cSx"/>
+                            <constraint firstItem="hEV-Ek-3W7" firstAttribute="top" secondItem="dy6-g8-ANv" secondAttribute="bottom" constant="40" id="NKk-3f-Be7"/>
+                            <constraint firstItem="hEV-Ek-3W7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NwF-f3-QWL"/>
+                            <constraint firstItem="hEV-Ek-3W7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qtv-RY-Py1"/>
+                            <constraint firstItem="hEV-Ek-3W7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sds-zf-x7H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorTextDisplay" destination="dy6-g8-ANv" id="10i-y8-LBf"/>
+                        <outlet property="uiView" destination="8bC-Xf-vdC" id="tQR-jc-Y2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
